@@ -1,4 +1,9 @@
 # SwiftComp-API
+[![Version](https://img.shields.io/github/v/release/wenbinyugroup/swiftcomp-api)](https://github.com/wenbinyu/swiftcomp-api/releases)
+[![Build Status](https://github.com/wenbinyugroup/swiftcomp-api/actions/workflows/ci.yml/badge.svg)](https://github.com/wenbinyugroup/swiftcomp-api/actions)
+[![codecov](https://codecov.io/gh/wenbinyugroup/swiftcomp-api/branch/main/graph/badge.svg)](https://codecov.io/gh/wenbinyugroup/swiftcomp-api)
+[![Last Commit](https://img.shields.io/github/last-commit/wenbinyugroup/swiftcomp-api)](https://github.com/wenbinyugroup/swiftcomp-api/commits/main)
+
 
 **SwiftComp-API** is a FastAPI-based backend designed to perform calculations related to composite laminate materials. It exposes various endpoints for computing engineering constants, plate properties, 3D laminate properties, and more. This API is suitable for researchers, engineers, and developers working in composite materials and structural analysis.
 
@@ -34,7 +39,53 @@
 
 ---
 
-## Installation
+## Installation Using Docker (recommend)
+
+### Prerequisites
+- Docker
+
+### Step-by-Step Guide
+
+1. **Clone the repository**:
+```bash
+git clone https://github.com/wenbinyugroup/swiftcomp-api.git
+cd swiftcomp-api
+```
+2. **Building the Docker Image**:
+You can build a Docker image for the FastAPI app using the following command:
+
+```bash
+docker build -t swiftcomp-api .
+```
+3. **Running the Docker Container**:
+Once the image is built, you can run the application in a Docker container:
+
+```bash
+docker run -d -p 8000:8000 swiftcomp-api
+```
+This will run the SwiftComp API app in a container and map port 8000 from the container to your local machine. You can access the application at http://localhost:8000.
+
+4. **Running Tests Inside the Docker Container**:
+To run the tests inside the running Docker container:
+
+```bash
+docker exec $(docker ps -q -f ancestor=swiftcomp-api) bash -c "PYTHONPATH=./ pytest"
+```
+This command sets the `PYTHONPATH` and runs `pytest` inside the running Docker container.
+
+5. **Monitoring Logs**:
+To monitor the logs from the running Docker container in real time:
+
+```bash
+docker logs -f <container_id_or_name>
+```
+You can get the container ID or name by running:
+
+```bash
+docker ps
+```
+
+## Installation Locally
 
 To set up the project locally, follow these steps:
 
