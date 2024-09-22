@@ -1,7 +1,6 @@
 # SwiftComp-API
 [![Version](https://img.shields.io/github/v/release/wenbinyugroup/swiftcomp-api)](https://github.com/wenbinyu/swiftcomp-api/releases)
 [![Build Status](https://github.com/wenbinyugroup/swiftcomp-api/actions/workflows/ci.yml/badge.svg)](https://github.com/wenbinyugroup/swiftcomp-api/actions)
-[![codecov](https://codecov.io/gh/wenbinyugroup/swiftcomp-api/branch/main/graph/badge.svg)](https://codecov.io/gh/wenbinyugroup/swiftcomp-api)
 [![Last Commit](https://img.shields.io/github/last-commit/wenbinyugroup/swiftcomp-api)](https://github.com/wenbinyugroup/swiftcomp-api/commits/main)
 
 
@@ -36,6 +35,16 @@
 - **Pytest**: A robust testing framework for Python.
 - **Uvicorn**: ASGI server used for serving FastAPI applications.
 - **Virtual Environment (venv)**: For dependency isolation.
+
+---
+
+## Public Use
+The SwiftComp API is deployed online:
+https://swiftcomp-api-7327e882adaf.herokuapp.com
+
+You can access API documentation at:
+* Swagger UI: https://swiftcomp-api-7327e882adaf.herokuapp.com/docs
+* ReDoc: https://swiftcomp-api-7327e882adaf.herokuapp.com/redoc
 
 ---
 
@@ -119,6 +128,20 @@ uvicorn app.main:app --reload
 
 This will start the SwiftComp API server at http://127.0.0.1:8000.
 
+
+5. **Testing**:
+
+The repository includes unit tests using `pytest`. To run the tests:
+
+* Ensure you are in the virtual environment.
+* Run the following command:
+```bash
+PYTHONPATH=./ pytest
+```
+
+
+---
+
 ## API Documentation
 FastAPI automatically generates interactive API documentation using **Swagger** and **Redoc**. Once the server is running, you can access the documentation at:
 
@@ -132,14 +155,7 @@ FastAPI automatically generates interactive API documentation using **Swagger** 
 * **POST /api/v1/laminate_3d_properties**: Computes the 3D properties of laminate.
 * **POST /api/v1/udfrc_properties**: Calculates UDFRC properties.
 
-## Testing
-The repository includes unit tests using `pytest`. To run the tests:
-
-1. Ensure you are in the virtual environment.
-2. Run the following command:
-```bash
-PYTHONPATH=./ pytest
-```
+---
 
 ## Contributing
 We welcome contributions to **SwiftComp-API**! Here's how you can help:
