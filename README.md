@@ -1,4 +1,9 @@
 # SwiftComp-API
+[![Version](https://img.shields.io/github/v/release/wenbinyugroup/swiftcomp-api)](https://github.com/wenbinyu/swiftcomp-api/releases)
+[![Build Status](https://github.com/wenbinyugroup/swiftcomp-api/actions/workflows/ci.yml/badge.svg)](https://github.com/wenbinyugroup/swiftcomp-api/actions)
+[![codecov](https://codecov.io/gh/wenbinyugroup/swiftcomp-api/branch/main/graph/badge.svg)](https://codecov.io/gh/wenbinyugroup/swiftcomp-api)
+[![Last Commit](https://img.shields.io/github/last-commit/wenbinyugroup/swiftcomp-api)](https://github.com/wenbinyugroup/swiftcomp-api/commits/main)
+
 
 **SwiftComp-API** is a FastAPI-based backend designed to perform calculations related to composite laminate materials. It exposes various endpoints for computing engineering constants, plate properties, 3D laminate properties, and more. This API is suitable for researchers, engineers, and developers working in composite materials and structural analysis.
 
